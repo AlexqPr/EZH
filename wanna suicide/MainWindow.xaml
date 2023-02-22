@@ -1,0 +1,34 @@
+﻿<Window x:Class="wanna_suicide.MainWindow"
+        
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wanna_suicide"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.09*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.09*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Описание" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Label Content="Название" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox x:Name="Descs" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4"/>
+        <TextBox x:Name="Names" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <ListBox x:Name="LB" Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" SelectionChanged="LB_SelectionChanged"/>
+        <DatePicker x:Name="DatePicker" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" SelectedDateChanged="DatePicker_SelectedDateChanged"/>
+        <Button x:Name="BC" Style="{StaticResource MaterialDesignPaperDarkButton}" Content="Создать" Cursor="Hand" Grid.Column="2" Grid.Row="6" Click="BC_Click_1" />
+        <Button x:Name="BS" Style="{StaticResource MaterialDesignPaperDarkButton}" Content="Сохранить" Cursor="Hand" Grid.Column="1" Grid.Row="6" Click="BS_Click" />
+        <Button x:Name="BD" Style="{StaticResource MaterialDesignPaperDarkButton}" Content="Удалить запись" Cursor="Hand" Grid.Column="0" Grid.Row="6" Click="BD_Click"/>
+    </Grid>
+</Window>
